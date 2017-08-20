@@ -1,0 +1,29 @@
+<div style="
+  width: 400px;
+  height: 250px;
+  background-color: cornflowerblue;
+  border: 2px solid black;
+  margin: 5px"
+  >
+        <div style="display:block; margin: 15px; border-bottom: 2px solid black">
+            <strong style="margin-left:150px;">{{widget}}</strong>
+        </div>
+
+        <div>
+            <label style="margin: 15px">What do you want to do: </label>
+            <input type="text" [(ngModel)]="taskDescription">
+        </div>
+
+        <div style="margin: 10px">
+            <label style="margin: 15px 102px 15px 5px">Task Staus: </label>
+            <select  [(ngModel)]="taskStatus" ng-change="timeSince()">
+              <option value="new">New</option>
+              <option value="inProgress">In Progress</option>
+              <option value="completed">Completed</option>
+            </select>
+        </div>
+
+        <div style="display:block; margin: 15px; background-color: yellow">
+            <strong>{{taskDescription}}</strong>
+        </div>
+ </div>
